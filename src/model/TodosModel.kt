@@ -1,9 +1,10 @@
 package model
 
+import utils.store
 import utils.uuid
 
-class TodosModel {
-    var todos: List<TodoModel> = emptyList()
+class TodosModel(val key: String = "todomvc-react-kotlin") {
+    var todos: List<TodoModel> = store(key)
 
     var onChanges: List<() -> Unit> = emptyList()
 
@@ -12,6 +13,7 @@ class TodosModel {
     }
 
     fun inform() {
+        store(key, this)
         onChanges.forEach { it() }
     }
 
