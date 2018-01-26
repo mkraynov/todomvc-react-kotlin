@@ -1,7 +1,6 @@
 package index
 
 import components.app
-import kotlinext.js.Object
 import kotlinext.js.invoke
 import kotlinext.js.require
 import model.TodosModel

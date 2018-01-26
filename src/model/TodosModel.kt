@@ -5,14 +5,14 @@ import utils.uuid
 class TodosModel {
     var todos: List<TodoModel> = emptyList()
 
-    var onChanges: List<Function<Any>> = emptyList()
+    var onChanges: List<() -> Unit> = emptyList()
 
-    fun subscribe(onChange: Function<Any>) {
+    fun subscribe(onChange: () -> Unit) {
         onChanges = onChanges.plus(onChange)
     }
 
     fun inform() {
-        onChanges.forEach { it.asDynamic()() }
+        onChanges.forEach { it() }
     }
 
     fun addTodo(title: String) {
