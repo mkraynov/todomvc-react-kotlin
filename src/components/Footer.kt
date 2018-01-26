@@ -14,8 +14,8 @@ interface FooterProps: RProps {
     var completedCount: Int
     var count: Int
     var nowShowing: NowShowing
-    var onChangeSelection: Function<Any>
-    var onClearCompleted: Function<Any>
+    var onChangeSelection: (nowShowing: NowShowing) -> Unit
+    var onClearCompleted: () -> Unit
 }
 
 class Footer(props: FooterProps) : RComponent<FooterProps, RState>() {
@@ -33,7 +33,7 @@ class Footer(props: FooterProps) : RComponent<FooterProps, RState>() {
                     a(href = "#/",
                       classes = classNames(object { val selected = (props.nowShowing == NowShowing.ALL_TODOS) })) {
                         attrs {
-                            onClickFunction = { props.onChangeSelection.asDynamic()(NowShowing.ALL_TODOS) }
+                            onClickFunction = { props.onChangeSelection(NowShowing.ALL_TODOS) }
                         }
                         +"All"
                     }
@@ -45,7 +45,7 @@ class Footer(props: FooterProps) : RComponent<FooterProps, RState>() {
                     a(href="#/active",
                       classes = classNames(object { val selected = (props.nowShowing == NowShowing.ACTIVE_TODOS) })) {
                         attrs {
-                            onClickFunction = { props.onChangeSelection.asDynamic()(NowShowing.ACTIVE_TODOS) }
+                            onClickFunction = { props.onChangeSelection(NowShowing.ACTIVE_TODOS) }
                         }
                         +"Active"
                     }
@@ -57,7 +57,7 @@ class Footer(props: FooterProps) : RComponent<FooterProps, RState>() {
                     a(href="#/completed",
                       classes = classNames(object { val selected = (props.nowShowing == NowShowing.COMPLETED_TODOS) })) {
                         attrs {
-                            onClickFunction = { props.onChangeSelection.asDynamic()(NowShowing.COMPLETED_TODOS) }
+                            onClickFunction = { props.onChangeSelection(NowShowing.COMPLETED_TODOS) }
                         }
                         +"Completed"
                     }
@@ -67,7 +67,7 @@ class Footer(props: FooterProps) : RComponent<FooterProps, RState>() {
                 button(classes = "clear-completed") {
                     attrs {
                         onClickFunction = {
-                            props.onClearCompleted.asDynamic()()
+                            props.onClearCompleted()
                         }
                     }
                     +"Clear completed"
@@ -80,8 +80,8 @@ class Footer(props: FooterProps) : RComponent<FooterProps, RState>() {
 fun RBuilder.footer(completedCount: Int,
                     count: Int,
                     nowShowing: NowShowing,
-                    onChangeSelection: Function<Any>,
-                    onClearCompleted: Function<Any>
+                    onChangeSelection: (nowShowing: NowShowing) -> Unit,
+                    onClearCompleted: () -> Unit
 ) = child(Footer::class) {
     attrs.completedCount = completedCount
     attrs.count = count

@@ -63,14 +63,6 @@ class App(props: AppProps) : RComponent<AppProps, AppState>(props) {
         setState { editing = null }
     }
 
-    fun onDestroy(todo: TodoModel) {
-        props.model.destroy(todo)
-    }
-
-    fun onChangeSelection(now: NowShowing) {
-        setState { nowShowing = now }
-    }
-
     override fun RBuilder.render() {
         div {
             header("header") {
@@ -86,7 +78,8 @@ class App(props: AppProps) : RComponent<AppProps, AppState>(props) {
                         autoFocus = true
                         onChangeFunction = { onChange(it) }
                         onKeyDownFunction = {
-                            if (it.asDynamic().keyCode == ENTER_KEYCODE) {
+                            val keyCode: Int = it.asDynamic().keyCode
+                            if (keyCode == ENTER_KEYCODE) {
                                 onKeyDown(it)
                             }
                         }
@@ -114,8 +107,8 @@ class App(props: AppProps) : RComponent<AppProps, AppState>(props) {
                                         todo = todo,
                                         editing = obj.editing,
                                         onCancel = { setState { editing = null } },
-                                        onDestroy = { todo: TodoModel -> onDestroy(todo) },
-                                        onEdit = { setState { editing = todo.id } },
+                                        onDestroy = { todo: TodoModel -> props.model.destroy(todo) },
+                                        onEdit = { todo: TodoModel -> setState { editing = todo.id } },
                                         onSave = { todo: TodoModel, text: String -> onSave(todo, text) },
                                         onToggle = { todo: TodoModel -> props.model.toggle(todo.id) }
                                 )
@@ -127,7 +120,7 @@ class App(props: AppProps) : RComponent<AppProps, AppState>(props) {
             footer(completedCount = props.model.getCompletedCount(),
                    count = getTodos().size,
                    nowShowing = state.nowShowing,
-                   onChangeSelection = { now: NowShowing -> onChangeSelection(now) },
+                   onChangeSelection = { now: NowShowing -> setState { nowShowing = now } },
                    onClearCompleted = { props.model.clearCompleted() }
             )
         }
