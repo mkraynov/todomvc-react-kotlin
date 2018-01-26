@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce1e0dd0-cbf7-4518-8841-6ce63de0d8d6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaScript.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/kotlin_extensions.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/kotlin_react.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/kotlin_react_dom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/kotlinx_html_js.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Debug_in_Chrome.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/npm_start.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.kt" afterPath="$PROJECT_DIR$/src/components/App.kt" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.kt" afterPath="$PROJECT_DIR$/src/components/Footer.kt" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.kt" afterPath="$PROJECT_DIR$/src/components/TodoItem.kt" />
-      <change beforePath="$PROJECT_DIR$/src/index/index.kt" afterPath="$PROJECT_DIR$/src/index/index.kt" />
-      <change beforePath="$PROJECT_DIR$/src/model/TodosModel.kt" afterPath="$PROJECT_DIR$/src/model/TodosModel.kt" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,14 +77,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="274">
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="e#20#354#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="668">
+                <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -113,16 +110,6 @@
               <folding>
                 <element signature="e#20#294#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TodoModel.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/TodoModel.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -179,7 +166,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/app/App.kt" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/utils/utils.kt" />
         <option value="$PROJECT_DIR$/src/model/TodoModel.kt" />
@@ -189,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/index/index.kt" />
         <option value="$PROJECT_DIR$/src/model/TodosModel.kt" />
         <option value="$PROJECT_DIR$/src/components/App.kt" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -389,12 +376,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516899758191</updated>
       <workItem from="1516899759377" duration="28491000" />
-      <workItem from="1516992861822" duration="1781000" />
+      <workItem from="1516992861822" duration="2559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30272000" />
+    <option name="totallyTimeSpent" value="31050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1436" height="877" extended-state="6" />
@@ -563,17 +550,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index/index.css" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@jetbrains/kotlin-react/build/classes/main/kotlin-react/react/react.kjsm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -669,11 +645,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="274">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="e#20#354#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="668">
+            <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

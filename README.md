@@ -45,3 +45,6 @@ Currently, debugging is supported only in IntelliJ IDEA Ultimate 2017.3.
 
 You can also debug your application using the developer tools in your browser.
 
+## Known issues and bugs
+
+If you have `TypeError: Kotlin.defineModule is not a function` after running application via `npm run` delete `node_modules/.cache`. [CRKA-59](https://youtrack.jetbrains.com/issue/CRKA-59).
