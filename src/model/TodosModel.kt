@@ -24,7 +24,7 @@ class TodosModel(val key: String = "todomvc-react-kotlin") {
 
     fun toggleAll(completed: Boolean) {
         todos = todos.map {
-            it.toggle(completed)
+            it.copy(completed = completed)
         }
         inform()
     }
@@ -32,7 +32,7 @@ class TodosModel(val key: String = "todomvc-react-kotlin") {
     fun toggle(id: String) {
         todos = todos.map {
             when (it.id) {
-                id -> it.toggle(!it.completed)
+                id -> it.copy(completed = !it.completed)
                 else -> it
             }
         }
@@ -47,7 +47,7 @@ class TodosModel(val key: String = "todomvc-react-kotlin") {
     fun save(todo: TodoModel, text: String) {
         todos = todos.map {
             when (it) {
-                todo -> todo.changeTitle(text)
+                todo -> todo.copy(title = text)
                 else -> it
             }
         }
